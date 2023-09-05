@@ -3,6 +3,14 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+const x1 = 5;
+const x2 = 8;
+if (x1 > x2) {
+  console.log(x1 + " è maggiore");
+} else {
+  console.log(x2 + " è maggiore");
+}
+
 const numbers = ["2", "6"];
 console.log(numbers);
 if (numbers[1] > numbers[0]) {
@@ -38,7 +46,8 @@ if (n20 % 5 === 0) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 let n8 = 8;
 let n16 = 16;
-console.log(n16 - n8);
+console.log(n16 - n8 === 8);
+
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".
   C'è una promozione in corso: se il totale del carrello supera 50, l'utente ha diritto alla spedizione gratuita (altrimenti la spedizione ha un costo fisso pari a 10).
@@ -46,13 +55,11 @@ console.log(n16 - n8);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let totalShoppingCart = 50;
+let totalShoppingCart = 35;
 if (totalShoppingCart > 50) {
-  console.log("spedizione gratuita");
-} else if (totalShoppingCart <= 50) {
-  console.log(totalShoppingCart + 10);
+  console.log("il tuo totale è " + totalShoppingCart);
 } else {
-  console.log("totale checkout comprese spese di spedizione");
+  console.log("il tuo totale è " + (totalShoppingCart + 10));
 }
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
@@ -90,7 +97,12 @@ console.log(array);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let value = 35;
-console.log(typeof 35);
+if (typeof value === "number") {
+  console.log("il dato è un numero");
+}
+
+console.log(typeof value);
+
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
@@ -115,6 +127,7 @@ if (num % 2 === 0) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+// partiamo sempre a verificare il caso più specifico e poi si mettono le alternative
 let val = 7;
 if (val >= 10) {
   console.log("Uguale o maggiore di 10");
@@ -132,8 +145,8 @@ const me = {
   name: "John",
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
-  city: "toronto",
 };
+me.city = "Toronto";
 console.log(me);
 console.log(me.city);
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -153,6 +166,8 @@ console.log(me);
 me.skills.pop();
 console.log(me);
 
+// me.skills.splice(2, 1) --> altro metodo
+
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
@@ -161,6 +176,8 @@ console.log(me);
 const arrayNumber = [];
 arrayNumber.push(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 console.log(arrayNumber.length);
+
+//  oppure mettere i numeri uno alla volta facendo sempre push
 
 /* ESERCIZIO 15
   Scrivi del codice per sostituire l'ultimo elemento dell'array, ovvero il valore 10, con il valore 100.
